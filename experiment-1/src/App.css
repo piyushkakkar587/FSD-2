@@ -1,42 +1,88 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Body ===== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+/* ===== Root Container ===== */
 #root {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
+/* ===== Home & About Sections ===== */
+.home,
+.about {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* ===== Headings ===== */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Paragraph ===== */
+p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ===== Links ===== */
+a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 12px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Logo ===== */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  height: 5em;
+  margin-bottom: 1.5em;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 15px #ffffffaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
+/* ===== Card ===== */
 .card {
-  padding: 2em;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
+/* ===== Docs / Footer Text ===== */
 .read-the-docs {
-  color: #888;
+  margin-top: 2rem;
+  color: #dddddd;
+  font-size: 0.9rem;
 }
