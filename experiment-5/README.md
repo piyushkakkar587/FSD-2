@@ -1,3 +1,7 @@
+**AIM**:-To optimize frontend performance of a Single Page Application by implementing lazy loading using React.
+
+**Theory:-**
+
 **Frontend Performance**:-Frontend performance refers to how quickly a website or application loads and responds to user actions.
 
 **Lazy Loading**:-Lazy loading is a technique in which components are loaded only when they are needed instead of loading everything at once.
@@ -13,6 +17,7 @@
 **User Experience (UX)**:-User experience refers to how easy and smooth an application feels for the user.
 
 **Learning Outcomes**
+
 Learned how to create a React application using create-react-app in VS Code.
 
 Understood the concept of frontend performance optimization.
