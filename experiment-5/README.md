@@ -14,15 +14,25 @@
 
 **Learning Outcomes**
 Learned how to create a React application using create-react-app in VS Code.
+
 Understood the concept of frontend performance optimization.
+
 Learned what Lazy Loading is and why it is used.
+
 Learned how to use React.lazy() to load components dynamically.
+
 Understood the role of Suspense in handling loading states.
+
 Learned how to display a loading indicator while components are being loaded.
+
 Learned how to load components only on user action using buttons.
+
 Observed reduction in initial page load time.
+
 Learned how lazy loading improves user experience in SPA.
+
 Gained practical knowledge of optimizing frontend performance in React.
+
 
 <img width="1920" height="1080" alt="Screenshot (87)" src="https://github.com/user-attachments/assets/5a8f53a7-81ee-40e4-bc6b-47df7ed298af" />
 
