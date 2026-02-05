@@ -95,6 +95,9 @@ Netlify will generate a live website link like:
 https://your-project-name.netlify.app
 Your project is now LIVE on the internet. 
 
+<img width="1920" height="1080" alt="Screenshot (90)" src="https://github.com/user-attachments/assets/01260e9f-3a81-45c0-b7cb-8c650e437e7a" />
+
+
 LEARNING OUTCOMES
 After completing this experiment, the student will be able to:
 Understand the concept of UI component libraries.
