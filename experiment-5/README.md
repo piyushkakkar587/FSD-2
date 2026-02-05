@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+**Frontend Performance**:-Frontend performance refers to how quickly a website or application loads and responds to user actions.
+**Lazy Loading**:-Lazy loading is a technique in which components are loaded only when they are needed instead of loading everything at once.
+**Single Page Application (SPA)**:-A Single Page Application is a web application that loads a single page and updates content dynamically without reloading the page.
+**React.lazy()**:-React.lazy() is a function in React used to load components dynamically for performance optimization.
+**Suspense**:-Suspense is a React component used to show a loading message while a lazy-loaded component is being loaded.
+**Component**:-A component is a reusable block of code that defines a part of the user interface in React.
+**User Experience (UX)**:-User experience refers to how easy and smooth an application feels for the user.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Learning Outcomes**
+Learned how to create a React application using create-react-app in VS Code.
+Understood the concept of frontend performance optimization.
+Learned what Lazy Loading is and why it is used.
+Learned how to use React.lazy() to load components dynamically.
+Understood the role of Suspense in handling loading states.
+Learned how to display a loading indicator while components are being loaded.
+Learned how to load components only on user action using buttons.
+Observed reduction in initial page load time.
+Learned how lazy loading improves user experience in SPA.
+Gained practical knowledge of optimizing frontend performance in React.
 
-## Available Scripts
+<img width="1920" height="1080" alt="Screenshot (87)" src="https://github.com/user-attachments/assets/5a8f53a7-81ee-40e4-bc6b-47df7ed298af" />
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
