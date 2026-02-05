@@ -1,13 +1,43 @@
+import { Button, Container, Typography, Stack, Box } from "@mui/material";
 import "./App.css";
-import Button from "@mui/material/Button";
 
-function App() {
+export default function App() {
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>MUI Button Working ✅</h1>
-      <Button variant="contained">Click Me</Button>
-    </div>
+    <Box className="page">
+      <Container maxWidth="sm">
+        <Box className="card">
+          <Typography variant="h4" className="heading">
+            Experiment-2
+          </Typography>
+
+          <Typography className="subtext">
+            Choose your button style
+          </Typography>
+
+          <Stack
+            direction="row"
+            spacing={2}
+            justifyContent="center"
+            marginBottom={3}
+          >
+            <Button variant="contained" size="small">
+              Small
+            </Button>
+
+            <Button variant="contained" size="medium">
+              Medium
+            </Button>
+
+            <Button variant="outlined">
+              Outlined
+            </Button>
+          </Stack>
+
+          <Button variant="contained" className="main-btn">
+            Click Me
+          </Button>
+        </Box>
+      </Container>
+    </Box>
   );
 }
-
-export default App;
