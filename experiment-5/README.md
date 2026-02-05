@@ -1,9 +1,15 @@
 **Frontend Performance**:-Frontend performance refers to how quickly a website or application loads and responds to user actions.
+
 **Lazy Loading**:-Lazy loading is a technique in which components are loaded only when they are needed instead of loading everything at once.
+
 **Single Page Application (SPA)**:-A Single Page Application is a web application that loads a single page and updates content dynamically without reloading the page.
+
 **React.lazy()**:-React.lazy() is a function in React used to load components dynamically for performance optimization.
+
 **Suspense**:-Suspense is a React component used to show a loading message while a lazy-loaded component is being loaded.
+
 **Component**:-A component is a reusable block of code that defines a part of the user interface in React.
+
 **User Experience (UX)**:-User experience refers to how easy and smooth an application feels for the user.
 
 **Learning Outcomes**
