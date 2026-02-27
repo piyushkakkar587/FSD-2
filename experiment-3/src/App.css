@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb, #e1f5fe);
+  min-height: 100vh;
+}
+
+/* Center app */
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 45px 60px;
+  width: 420px;
+  text-align: center;
+  color: #0d47a1;
+  box-shadow: 0 20px 45px rgba(13, 71, 161, 0.25);
+  animation: fadeIn 0.9s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover */
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(13, 71, 161, 0.35);
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: #0d47a1;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 30px;
+}
+
+/* Nav links */
+.nav a {
+  color: #1565c0;
+  text-decoration: none;
+  font-size: 18px;
+  padding-bottom: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Underline animation */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #42a5f5, #1e88e5);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  width: 100%;
+}
+
+/* Active nav */
+.nav a.active {
+  color: #1e88e5;
+  font-weight: 600;
+}
+
+/* Content area */
+.content {
+  background: white;
+  color: #1a237e;
+  padding: 25px;
+  border-radius: 14px;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(30, 136, 229, 0.15);
+  transition: transform 0.3s ease;
+}
+
+/* Content hover */
+.content:hover {
+  transform: scale(1.03);
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
