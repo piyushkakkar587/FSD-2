@@ -41,4 +41,14 @@ Use of JWT for secure API access
 
 Testing APIs using Postman
 
+
+<img width="1920" height="1080" alt="Screenshot (134)" src="https://github.com/user-attachments/assets/062f77d8-bed7-478e-86ad-e19c23e6cf8d" />
+
+<img width="1920" height="1080" alt="Screenshot (135)" src="https://github.com/user-attachments/assets/ca13e095-234b-44d2-b6dc-46f23a824f00" />
+
+<img width="1920" height="1080" alt="Screenshot (136)" src="https://github.com/user-attachments/assets/765ae3cd-3bc4-40ea-a354-c9f62e7b14b1" />
+
+
+<img width="1920" height="1080" alt="Screenshot (137)" src="https://github.com/user-attachments/assets/b8894f67-61df-48dd-b77b-fcceb337b382" />
+
 <img width="1920" height="1080" alt="Screenshot (138)" src="https://github.com/user-attachments/assets/0364619d-1cef-45ac-8d1b-ed3b694e96ca" />
