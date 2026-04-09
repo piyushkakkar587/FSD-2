@@ -21,7 +21,7 @@ def client():
 def test_create_student(client):
     response = client.post("/students", json={"name": "Student-1"})
     assert response.status_code == 201
-    assert response.json["name"] == "Student-2"
+    assert response.json["name"] == "Student-1"
 
 def test_get_students(client):
     response = client.get("/students")
@@ -30,7 +30,7 @@ def test_get_students(client):
 
 def test_get_student(client):
     # First, create a student to ensure there is one to retrieve
-    create_response = client.post("/students", json={"name": "Student-2"})
+    create_response = client.post("/students", json={"name": "Student-1"})
     student_id = create_response.json["id"]
 
     # Now, retrieve the student by ID
