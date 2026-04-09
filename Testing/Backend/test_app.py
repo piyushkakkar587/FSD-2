@@ -30,7 +30,7 @@ def test_get_students(client):
 
 def test_get_student(client):
     # First, create a student to ensure there is one to retrieve
-    create_response = client.post("/students", json={"name": "Student-1"})
+    create_response = client.post("/students", json={"name": "Student-2"})
     student_id = create_response.json["id"]
 
     # Now, retrieve the student by ID
