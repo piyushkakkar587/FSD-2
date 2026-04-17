@@ -8,40 +8,40 @@ describe("Login Form Component", () => {
     vi.spyOn(window, "alert").mockImplementation(() => {});
   });
 
-  it("renders fields", () => {
+  it("RENDERS email and password fields", () => {
     render(<Form />);
-    expect(screen.getByLabelText("email")).toBeInTheDocument();
-    expect(screen.getByLabelText("password")).toBeInTheDocument();
+
+    expect(screen.getByLabelText(/email/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/password/i)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /login/i })).toBeInTheDocument();
   });
 
-  it("shows error for short password", () => {
+  it("SHOWS ERROR for short password", () => {
     render(<Form />);
 
-    fireEvent.change(screen.getByLabelText("email"), {
-      target: { value: "test@test.com" },
-    });
+    const email = screen.getByLabelText(/email/i);
+    const password = screen.getByLabelText(/password/i);
+    const button = screen.getByRole("button", { name: /login/i });
 
-    fireEvent.change(screen.getByLabelText("password"), {
-      target: { value: "123" },
-    });
+    fireEvent.change(email, { target: { value: "test@test.com" } });
+    fireEvent.change(password, { target: { value: "123" } });
 
-    fireEvent.click(screen.getByText("Login"));
+    fireEvent.click(button);
 
     expect(screen.getByText("Min 6 characters")).toBeInTheDocument();
   });
 
-  it("submits successfully", () => {
+  it("SUBMITS successfully with valid input", () => {
     render(<Form />);
 
-    fireEvent.change(screen.getByLabelText("email"), {
-      target: { value: "test@test.com" },
-    });
+    const email = screen.getByLabelText(/email/i);
+    const password = screen.getByLabelText(/password/i);
+    const button = screen.getByRole("button", { name: /login/i });
 
-    fireEvent.change(screen.getByLabelText("password"), {
-      target: { value: "123456" },
-    });
+    fireEvent.change(email, { target: { value: "test@test.com" } });
+    fireEvent.change(password, { target: { value: "123456" } });
 
-    fireEvent.click(screen.getByText("Login"));
+    fireEvent.click(button);
 
     expect(window.alert).toHaveBeenCalledWith("Form submitted successfully");
   });
