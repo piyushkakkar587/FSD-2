@@ -54,5 +54,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run frontend tests
-        run: npx vitest run   # ✅ FIXED (very important)
+      - - name: Run frontend tests
+          run: npx --yes vitest run
