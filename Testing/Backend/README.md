@@ -1,94 +1,40 @@
- **Experiment 8 - RESTful API using Flask**
- 
- **Title**:-Develop RESTful APIs using Backend Framework (Flask)
+README.md
 
-** Description**
-This project demonstrates the implementation of RESTful APIs using Python Flask.  
-The backend server provides CRUD operations for managing student data.
+Preview
 
-The student data is stored in-memory using a Python list (no database used).
+Code
 
-The APIs were tested using Postman and deployed on the Render cloud platform.
+Blame
+Experiment: Fullstack Testing (Frontend + Backend)
 
-**Technologies Used**
-- Python 3
-- Flask
-- Gunicorn
-- Postman
-- Render (Cloud Deployment)
+Objective To perform testing on both frontend and backend components of an application using modern testing tools and integrate them using GitHub Actions for continuous integration.
 
-backend/
-└── rest-api-lab/
-    ├── app.py
-    ├── requirements.txt
-    ├── README.md
-    └── screenshots/
+Tools and Technologies Frontend: Vite, Vitest, React Testing Library, jsdom Backend: Python, Pytest CI/CD: GitHub Actions
 
----
+Procedure
 
-**How to Run Locally**
+Frontend Testing First, install the required dependencies such as vitest, testing library, and jsdom. Configure vite.config.js to enable the testing environment using jsdom. Create a setupTests.js file to include jest-dom for better assertions. Develop a simple login form component and write test cases to verify rendering of fields, validation for password length, and successful form submission. Run the tests using Vitest and ensure all test cases pass.
 
-Step 1: Clone Repository
-git clone <your-github-repo-link>
+Backend Testing Install required Python dependencies from requirements.txt. Write test cases using pytest to validate backend functionality. Execute the tests and verify that all backend test cases pass successfully.
 
-Step 2: Go to Project Directory
-cd backend/rest-api-lab
+CI/CD Integration Create a GitHub Actions workflow file. Configure separate jobs for backend and frontend testing. For backend, set up Python, install dependencies, and run pytest. For frontend, set up Node.js, install dependencies using npm ci, and run Vitest tests. Push the code to GitHub and verify that the workflow runs automatically and all tests pass.
 
-Step 3: Create Virtual Environment
-python -m venv venv
+Result All frontend and backend test cases were executed successfully. GitHub Actions workflow also ran successfully, ensuring continuous integration.
 
- Step 4: Activate Virtual Environment
-Windows:
-venv\Scripts\activate
+Learning Outcomes
 
-Mac/Linux:
-source venv/bin/activate
+Gained understanding of frontend testing using Vitest and React Testing Library
 
-Step 5: Install Dependencies
-pip install -r requirements.txt
+Learned how to write and execute backend test cases using Pytest
 
- Step 6: Run Application
-python app.py
+Understood how to validate form inputs and handle user interactions in tests
 
-Server will start at:
-http://127.0.0.1:5000
+Learned to configure and run tests in a Vite environment
 
- API Endpoints
+Gained knowledge of integrating frontend and backend testing in a single project
 
- 1️⃣ GET All Students
-GET /students
+Understood the working of GitHub Actions for CI/CD automation
 
- 2️⃣ POST Add Student
-POST /students
-
-Example JSON:
-{
-  "name": "Piyush",
-  "roll": "23BCU70009",
-  "course": "CSE"
-}
-
- 3️⃣ PUT Update Student
-PUT /students/<index>
-
- 4️⃣ DELETE Student
-DELETE /students/<index>
-
- Deployment
-
-This project is deployed on Render.
-
-**Outcome**
- 
-- Successfully created CRUD APIs
-- Stored data in-memory
-- Tested using Postman
-- Deployed successfully on Render
-<img width="1920" height="1080" alt="Screenshot (108)" src="https://github.com/user-attachments/assets/54bdc595-4f5e-4851-8f76-837d44fdfde5" />
-<img width="1920" height="1080" alt="Screenshot (109)" src="https://github.com/user-attachments/assets/b60fd816-4db4-4937-89fb-b20f4b51f0fd" />
-<img width="1920" height="1080" alt="Screenshot (110)" src="https://github.com/user-attachments/assets/4f449a9e-ad1a-46cb-85a6-9e433a507293" />
-<img width="1920" height="1080" alt="Screenshot (111)" src="https://github.com/user-attachments/assets/5af9c5da-461d-4b95-a2f3-c558f56ed884" />
-<img width="1920" height="1080" alt="Screenshot (112)" src="https://github.com/user-attachments/assets/295644c4-6c31-4e8f-83f1-754eebebfb09" />
-<img width="1920" height="1080" alt="Screenshot (115)" src="https://github.com/user-attachments/assets/74f10a35-f40f-4aa6-844c-a153f28e10d6" />
+Learned how to debug errors in testing and CI pipelines
 
 
