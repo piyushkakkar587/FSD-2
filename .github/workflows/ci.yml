@@ -7,6 +7,7 @@ on:
 
 jobs:
 
+  # ================= BACKEND TEST =================
   backend-test:
     runs-on: ubuntu-latest
 
@@ -35,6 +36,7 @@ jobs:
           pytest
 
 
+  # ================= FRONTEND TEST =================
   frontend-test:
     runs-on: ubuntu-latest
 
@@ -46,16 +48,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: Install dependencies
         run: npm install
-
-      - name: Fix permissions
-        run: chmod +x node_modules/.bin/vitest
 
       - name: Run frontend tests
         run: npx vitest run
