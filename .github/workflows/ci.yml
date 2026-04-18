@@ -38,9 +38,8 @@ jobs:
   frontend-test:
     runs-on: ubuntu-latest
 
-    
-  env:
-     FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: false
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: false
 
     defaults:
       run:
@@ -56,9 +55,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: |
-          rm -rf node_modules package-lock.json
-          npm install
+        run: npm install
 
       - name: Run frontend tests
         run: npm run test -- --run
