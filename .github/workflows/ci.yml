@@ -7,6 +7,7 @@ on:
 
 jobs:
 
+  # ================= BACKEND TEST =================
   backend-test:
     runs-on: ubuntu-latest
 
@@ -35,6 +36,7 @@ jobs:
           pytest
 
 
+  # ================= FRONTEND TEST =================
   frontend-test:
     runs-on: ubuntu-latest
 
@@ -54,8 +56,13 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: npm install
+      - name: Clean install dependencies
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
+
+      - name: Fix permissions
+        run: chmod -R 755 node_modules/.bin
 
       - name: Run frontend tests
         run: npm run test -- --run
