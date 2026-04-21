@@ -1,40 +1,176 @@
-README.md
+# Experiment-20: Implement CI/CD Pipeline for Application Deployment
 
-Preview
+## Submission Date
 
-Code
+22 April 2026
 
-Blame
-Experiment: Fullstack Testing (Frontend + Backend)
+---
 
-Objective To perform testing on both frontend and backend components of an application using modern testing tools and integrate them using GitHub Actions for continuous integration.
+## Objective
 
-Tools and Technologies Frontend: Vite, Vitest, React Testing Library, jsdom Backend: Python, Pytest CI/CD: GitHub Actions
+To implement a CI/CD pipeline for application deployment by integrating Docker and GitHub Actions with the backend testing project.
 
-Procedure
+---
 
-Frontend Testing First, install the required dependencies such as vitest, testing library, and jsdom. Configure vite.config.js to enable the testing environment using jsdom. Create a setupTests.js file to include jest-dom for better assertions. Develop a simple login form component and write test cases to verify rendering of fields, validation for password length, and successful form submission. Run the tests using Vitest and ensure all test cases pass.
+## Tools and Technologies Used
 
-Backend Testing Install required Python dependencies from requirements.txt. Write test cases using pytest to validate backend functionality. Execute the tests and verify that all backend test cases pass successfully.
+* Docker
+* GitHub Actions
+* Python (Flask)
+* Pytest
+* Git and GitHub
 
-CI/CD Integration Create a GitHub Actions workflow file. Configure separate jobs for backend and frontend testing. For backend, set up Python, install dependencies, and run pytest. For frontend, set up Node.js, install dependencies using npm ci, and run Vitest tests. Push the code to GitHub and verify that the workflow runs automatically and all tests pass.
+---
 
-Result All frontend and backend test cases were executed successfully. GitHub Actions workflow also ran successfully, ensuring continuous integration.
+## Project Structure
 
-Learning Outcomes
+```
+Testing/
+│
+├── Backend/
+│   ├── app.py
+│   ├── run.py
+│   ├── requirements.txt
+│   ├── Dockerfile
+│
+└── .github/
+    └── workflows/
+        └── cd.yml
+```
 
-Gained understanding of frontend testing using Vitest and React Testing Library
+---
 
-Learned how to write and execute backend test cases using Pytest
+## Step 1: Dockerization of Backend
 
-Understood how to validate form inputs and handle user interactions in tests
+### Create Dockerfile
 
-Learned to configure and run tests in a Vite environment
+```
+FROM python:3.10
 
-Gained knowledge of integrating frontend and backend testing in a single project
+WORKDIR /app
 
-Understood the working of GitHub Actions for CI/CD automation
+COPY . .
 
-Learned how to debug errors in testing and CI pipelines
+RUN pip install --no-cache-dir -r requirements.txt
 
+CMD ["python", "run.py"]
+```
 
+---
+
+### Build Docker Image
+
+```
+docker build -t backend-app .
+```
+
+---
+
+### Run Docker Container
+
+```
+docker run -d -p 5000:5000 --name backend-container backend-app
+```
+
+---
+
+## Step 2: Testing
+
+Run backend tests using:
+
+```
+pytest
+```
+
+---
+
+## Step 3: CI/CD Pipeline using GitHub Actions
+
+### Workflow File: `.github/workflows/cd.yml`
+
+```
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: Testing/Backend
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Tests
+        run: pytest
+
+      - name: Build Docker Image
+        run: docker build -t backend-app .
+
+      - name: Run Docker Container
+        run: docker run -d -p 5000:5000 backend-app
+```
+
+---
+
+## Pipeline Workflow
+
+1. Code is pushed to GitHub
+2. GitHub Actions workflow is triggered
+3. Dependencies are installed
+4. Tests are executed using pytest
+5. Docker image is built
+6. Container is deployed
+
+---
+
+## Output Screenshots (to be attached)
+
+* Docker image created (`docker images`)
+* Running container (`docker ps`)
+* GitHub Actions workflow execution
+
+---
+
+## Key Features
+
+* Automated testing and deployment
+* Containerization using Docker
+* Continuous integration using GitHub Actions
+
+---
+
+## Conclusion
+
+This experiment demonstrates the implementation of a CI/CD pipeline using Docker and GitHub Actions. The pipeline automates testing, building, and deployment processes, ensuring efficient and reliable application delivery.
+
+---
+
+## Commands Summary
+
+```
+docker build -t backend-app .
+docker run -d -p 5000:5000 backend-app
+docker ps
+docker images
+```
+
+---
+
+## Author
+
+Piyush Kakkar
